@@ -1,0 +1,96 @@
+<p style="text-align: center;"><img src="Images/bomb_wrong.gif" alt="" /><strong>HOW TO PLAY: <span style="color: #ff0000;">MINESWEEPER</span><img src="Images/bomb_wrong.gif" alt="" /></strong></p>
+<p style="text-align: left;"><em>Your goal:&nbsp;</em>In Minesweeper, your goal is to clear the whole minefield, without clicking on a bomb. Now that may sound simple, but the only way you know theres a bomb is based on the tile's around one in the minefield. Here's how that works:</p>
+<p style="text-align: left;">Each tile in the board has <span style="color: #ff0000;"><strong>8 neighbors:</strong></span></p>
+<table style="width: 148px; height: 150px;">
+<tbody>
+<tr>
+<td style="width: 46px;"><span style="color: #000000;">&nbsp; &nbsp;1</span></td>
+<td style="width: 54px;"><span style="color: #000000;">&nbsp; &nbsp;2</span></td>
+<td style="width: 52px;"><span style="color: #000000;">&nbsp; &nbsp;3</span></td>
+</tr>
+<tr>
+<td style="width: 46px;"><span style="color: #000000;">&nbsp; &nbsp;4</span></td>
+<td style="width: 54px;"><span style="color: #000000;">&nbsp; &nbsp;C</span></td>
+<td style="width: 52px;"><span style="color: #000000;">&nbsp; &nbsp;5</span></td>
+</tr>
+<tr>
+<td style="width: 46px;"><span style="color: #000000;">&nbsp; &nbsp;6</span></td>
+<td style="width: 54px;"><span style="color: #000000;">&nbsp; &nbsp;7</span></td>
+<td style="width: 52px;"><span style="color: #000000;">&nbsp; &nbsp;8</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>The number of a tile reflects the amount of bombs in the 8 adjacent cells to it (or 3 if it's at the corner, etc).</p>
+<p>You can use this to your advantage to rule out tiles that must be bombs, to not click on the. You can even <strong><span style="color: #800080;">flag </span></strong>them to not have to remember, by right-clicking on the tile. Here's an example on how to use them: (The H stands for hidden as in it has not been revealed yet)</p>
+<table style="width: 150px; height: 150px;">
+<tbody>
+<tr>
+<td>&nbsp; 1</td>
+<td>&nbsp; 1</td>
+<td>&nbsp; H</td>
+</tr>
+<tr>
+<td>&nbsp; 1</td>
+<td>&nbsp; H</td>
+<td>&nbsp; H</td>
+</tr>
+<tr>
+<td>&nbsp; 1</td>
+<td>&nbsp; 1</td>
+<td>&nbsp; 1</td>
+</tr>
+</tbody>
+</table>
+<p>Looking at this small 3x3 board, we know the tile in the middle <strong><span style="color: #ff0000;">must&nbsp;</span></strong><span style="color: #ff0000;"><span style="color: #000000;">be bomb becuase of the '1' in the bottom left and bottom right corner. Then, we can deduct that the H in the&nbsp;</span></span><span style="color: #ff0000;"><span style="color: #000000;">second row and third column must be safe to click too, since the '1' in the bottom right is already taken care of because of the bomb in the center. Here's another situation:</span></span></p>
+<table style="width: 150px; height: 150px;">
+<tbody>
+<tr>
+<td>&nbsp; H</td>
+<td>&nbsp; H</td>
+<td>&nbsp; H</td>
+</tr>
+<tr>
+<td>&nbsp; 1</td>
+<td>&nbsp; H</td>
+<td>&nbsp; H</td>
+</tr>
+<tr>
+<td>&nbsp; 0</td>
+<td>&nbsp; 1</td>
+<td>&nbsp; 1</td>
+</tr>
+</tbody>
+</table>
+<p>Here, the hidden tiles are not as easy to figure out. However, since the bottom left is a 0, the hidden tile in the center must be safe to click. Clicking it might reveal this:</p>
+<table style="width: 150px; height: 150px;">
+<tbody>
+<tr>
+<td>&nbsp; 1</td>
+<td>&nbsp; <span style="color: #ff0000;"><strong>H</strong></span></td>
+<td>&nbsp; H</td>
+</tr>
+<tr>
+<td>&nbsp; 1</td>
+<td>&nbsp; 2</td>
+<td>&nbsp; <strong><span style="color: #ff0000;">H</span></strong></td>
+</tr>
+<tr>
+<td>&nbsp; 0</td>
+<td>&nbsp; 1</td>
+<td>&nbsp; 1</td>
+</tr>
+</tbody>
+</table>
+<p>Now that there's a two in the middle, we know that the only one of the hidden tiles that is <strong><span style="color: #ff0000;">NOT </span></strong>a bomb is the top right one, since the '1's in the top left and bottom right ensure that the bolded, red 'H's must be bombs, and the '2' in the center ensure there can be no more. So here, the right move would be to flag the two bombs.</p>
+<p>How to win:</p>
+<ul>
+<li>Remove all tiles that are blank, 0, 1, 2, 3, 4, 5, 6, 7, 8</li>
+<li>Bomb's dont have to be flagged to win, but they help</li>
+</ul>
+<p>Losing:</p>
+<ul>
+<li>Clicking a bomb</li>
+<li>Not cleared the minefield withing 100 seconds</li>
+</ul>
+<p>In this version, you can construct a new Beginner game (8x8 with 10 bombs), or customize your own at the start, and restart if you fail. Good luck!</p>
